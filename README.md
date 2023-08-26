@@ -1,2 +1,2 @@
 # TicTacToe
-TicTacToe Game
+A basic TicTacToe Game vs A.I.
