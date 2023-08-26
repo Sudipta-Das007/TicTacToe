@@ -1,0 +1,181 @@
+@import 'grid_style.css';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #00ff55;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(255, 247, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .cell:hover {
+    background-color: rgba(0, 0, 255, 0.4); /* Lighten the background color on hover */
+    transform: translateY(-2px); /* Add a slight lift effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .cell.x {
+    color: rgb(255, 85, 0); /* Set the color for X */
+    background-color: rgba(255, 136, 0, 0.3); /* Set a lighter shade of red */
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  .cell.o {
+    color: blue; /* Set the color for O */
+    background-color: rgba(0, 0, 255, 0.1); /* Set a lighter shade of blue */
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  
+  .player-labels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .player-label {
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 100px;
+    text-align: center; /* Center the text horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: center;
+  }
+
+  .player-label .bold-x {
+    font-weight: bold; /* Make the X bold */
+    color: rgb(255, 85, 0);
+  }
+
+  .player-label .bold-o {
+    font-weight: bold; /* Make the X bold */
+    color: blue;
+  }
+
+  h1 {
+    margin-bottom: 5px; /* Add margin to the bottom of the h1 */
+  }
+
+
+  .active {
+    background-color: #00ff55;
+    box-shadow: 0 2px 4px #00ff55;
+  }
+  
+  #singlePlayerButton {
+    display: inline-block;
+    margin: 0px 10px;
+    border: none;
+    padding: 0; /* Remove top and bottom padding */
+    width: 150px; /* Set a fixed width */
+    height: 30px; /* Decrease the height */
+    text-align: center; /* Center the text horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    font-size: 14px;
+    background-color: rgb(255, 247, 0);
+    color: #000000; /* Set text color for better contrast */
+  }
+  
+
+
+#secondButton,
+#firstButton {
+  display: inline-block;
+  margin: 10px 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0; /* Remove top and bottom padding */
+  width: 150px; /* Set a fixed width */
+  height: 30px; /* Decrease the height */
+  text-align: center; /* Center the text horizontally */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  font-size: 14px;
+  background-color: #00ff55;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.28);
+}
+
+
+#secondButton:hover,
+#firstButton:hover {
+  background-color: #ff0000; /* Darken the color on hover */
+  transform: translateY(-2px); /* Add a slight lift effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+.win-message {
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for 'Player wins' message */
+.win {
+  color: green; /* Choose a color */
+}
+
+/* Style for 'A.I. wins' message */
+.draw {
+  color: red; /* Choose a color */
+}
+
+
+.winning-cell {
+  position: relative;
+}
+
+.winning-cell::after {
+  content: '';
+  position: absolute;
+  width: 65%; /* Adjust the width of the overlay */
+  height: 65%; /* Adjust the height of the overlay */
+  border: 3px solid #ff0000; /* Change to the desired color */
+  transform: rotate(45deg);
+  left: 50%; /* Position the overlay horizontally in the center */
+  top: 50%; /* Position the overlay vertically in the center */
+  transform: translate(-50%, -50%) rotate(45deg); /* Center the overlay */
+}
+

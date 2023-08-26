@@ -1,0 +1,47 @@
+.cell:nth-child(1) {
+    border-top: none;
+    border-left: none;
+    border-right-width: 2px;
+  }
+  
+  .cell:nth-child(2) {
+    border-top: none;
+    border-right-width: 2px;
+  }
+  
+  .cell:nth-child(3) {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+  
+  .cell:nth-child(4){
+    border-left: none;
+    border-right-width: 2px;
+  }
+
+  .cell:nth-child(5){
+    border-right-width: 2px;
+  }
+
+  .cell:nth-child(6){
+    border-right:none ;
+    border-left: none;
+  }
+  
+  .cell:nth-child(7) {
+    border-bottom: none;
+    border-left: none;
+    border-right-width: 2px;
+  }
+  
+  .cell:nth-child(8) {
+    border-bottom: none;
+    border-right-width: 2px;
+  }
+  
+  .cell:nth-child(9) {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+  }
